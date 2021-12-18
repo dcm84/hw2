@@ -2,10 +2,10 @@ import PropTypes from 'prop-types';
 
 function ProjectList(props) {
     const {projects} = props;
-    let i=0;
+
     return (
       <div className="galery">
-        {projects.map(o => <img src={o.img} key={i++}/>)}
+        {projects.map((v,i) => <img src={v.img} key={i}/>)}
       </div>
     )
 }

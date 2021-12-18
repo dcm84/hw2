@@ -1,14 +1,18 @@
 import PropTypes from 'prop-types';
-import ProductModel from '../models/ProductModel';
 import ShopItem from './ShopItem.js';
 
 function ListView(props) {
     const {items} = props;
-    let i=0;
+
+    //Если элементов нет, то таблицу не выводим
+    if (!items.length) {
+      return ""; 
+    }
+    
     return (
       <table className="item_table">
         <tbody>
-          {items.map(o => <ShopItem item={o} key={i++} />)}
+          {items.map((v,i) => <ShopItem item={v} key={i} />)}
         </tbody>
       </table>
     )

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
+import { version } from 'react';
 import ShopCard from '../components/ShopCard.js';
 
 function CardsView(props) {
     const {cards} = props;
-    let i = 0;
 
     return (
-      cards.map(o => <ShopCard card={o} key={i++} />)
+      cards.map((v,i) => <ShopCard card={v} key={i} />)
     )
 }
 
