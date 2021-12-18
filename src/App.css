@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+/*стили для задачи с фильтрами*/
+.filter_task {margin: 20px auto; width: 900px;}
+.filter_task ul{margin: 15px 0px; padding: 0px;}
+.filter_task li{display: inline-block; border: 1px #555 solid; padding: 7px 14px; color: #555; font:600 14px Arial; cursor: pointer}
+.filter_task li.active{background-color: #555; color: #fff;}
+.filter_task li:hover{background-color: #ccc;}		
+.filter_task .galery {font-size: 0px; column-count: 3; column-gap: 15px;}
+.filter_task .galery img {width: 100%; margin-bottom: 15px;}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+/*стили для задачи с выводом кроссовок*/
+.layouts_task {margin: 20px auto; width: 1500px; }
+.layouts_task>p{text-align:right;  padding-right: 30px;}
+.layouts_task>p>span{text-align:right; font-size: 34px; color: #696969;}
+.layouts_task div.item_box { width: 350px; margin: 20px 75px; background-color: #f5f5f5; border-radius: 7px; box-shadow: 0 0.4em 10px rgba(122,122,122,0.5); float:left;}
+.layouts_task div.item_box h2{color: #23211f; margin: 0px; padding: 35px 0px 17px 0px; text-align: center; text-transform: uppercase; font: 600 24px Arial}
+.layouts_task div.item_box p{margin: 0px; text-align: center; font: 14px Arial}
+.layouts_task .item_box .crop {width: 350px; height: 165px; overflow: hidden; margin-bottom: 10px;}    
+.layouts_task .item_box .crop img { margin: -95px 0 0 30px; max-width: 320px;}
+.layouts_task div.item_box div.price{padding: 0px 38px 36px 42px;}
+.layouts_task div.item_box span{margin: 20px 0px 0px 0px; color: #d53e2d; font: 400 18px Arial}
+.layouts_task button {color: red; font: #d53e2d Arial; border: 1px #d53e2d solid; border-radius: 20px; padding: 8px 16px; background-color: #f5f5f5; float: right; margin: -5px 7px 32px 0px; cursor: pointer; font-weight: bold;}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+.layouts_task .item_table{width: 100%; clear:both; border-collapse: collapse;}	
+.layouts_task .item_table tr {background-color: #f5f5f5; border-bottom: 1px #fff solid;}
+.layouts_task .item_table td{vertical-align: center; width: 20%;}
+.layouts_task .item_table .crop {height: 100px; overflow: hidden;}  
+.layouts_task .item_table .crop img {width: 145px; margin: -45px 0 0 0px;}
+.layouts_task .item_table h2{color: #23211f; margin: 0px; text-align: center; text-transform: uppercase; font: 600 24px Arial}
+.layouts_task .item_table p{margin: 0px; text-align: center; font: 14px Arial}	
+.layouts_task .item_table .price{margin: 20px 0px 0px 0px; color: #d53e2d; font: 400 18px Arial}	
+.layouts_task .item_table button {float:none; margin: 0px;}
+.layouts_task .material-icons {cursor: pointer;}
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
