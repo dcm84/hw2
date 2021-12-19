@@ -1,18 +1,19 @@
 import PropTypes from 'prop-types';
 import ShopItem from './ShopItem.js';
+import {v4 as uuidv4} from 'uuid';
 
 function ListView(props) {
     const {items} = props;
 
     //Если элементов нет, то таблицу не выводим
     if (!items.length) {
-      return ""; 
+      return null; 
     }
     
     return (
       <table className="item_table">
         <tbody>
-          {items.map((v,i) => <ShopItem item={v} key={i} />)}
+          {items.map(v => <ShopItem item={v} key={uuidv4()} />)}
         </tbody>
       </table>
     )

@@ -1,12 +1,12 @@
 import PropTypes from 'prop-types';
-import { version } from 'react';
 import ShopCard from '../components/ShopCard.js';
+import {v4 as uuidv4} from 'uuid';
 
 function CardsView(props) {
     const {cards} = props;
 
     return (
-      cards.map((v,i) => <ShopCard card={v} key={i} />)
+      cards.map(v => <ShopCard card={v} key={uuidv4()} />)
     )
 }
 
